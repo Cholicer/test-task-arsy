@@ -1,7 +1,5 @@
 # test_task_app
 
-A new Flutter project.
-
 **Project structure:**
 
 ```
@@ -16,10 +14,12 @@ lib/
     - controllers/
       - item_controller.dart
     - screens/
-      - item_list.dart
-      - item_edit.dart
-    - widgets/
-      - item_list_tile.dart
+      - item_list/
+        - item_list.dart
+        - widgets/
+          - item_list_tile.dart
+      - item_edit/
+        - item_edit.dart
 ```
 
 View [demo](https://streamable.com/ebhcvh).
