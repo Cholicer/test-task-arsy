@@ -2,6 +2,27 @@
 
 **Project structure:**
 
+```bash
+lib
+├───bindings
+├───common
+│   └───widgets
+├───data
+│   ├───repositories
+│   └───services
+│       └───api
+├───features
+│   └───whatever
+│       ├───controllers
+│       ├───models
+│       └───screens
+│           ├───item_edit
+│           │   └───widgets
+│           └───item_list
+│               └───widgets
+└───utils
+```
+
 ```
 lib/
   - main.dart
