@@ -23,7 +23,7 @@ lib
 └───utils
 ```
 
-View [![demo](https://img.youtube.com/vi/GIemSKUeu34/0.jpg)](https://www.youtube.com/watch?v=GIemSKUeu34)
+View [demo](https://youtu.be/GIemSKUeu34).
 
 Fake [server](https://github.com/Cholicer/server-for-test-task) for this app.
 
