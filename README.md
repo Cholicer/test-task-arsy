@@ -25,6 +25,8 @@ lib
 
 View [demo](https://streamable.com/ebhcvh).
 
+[![demo](https://youtu.be/GIemSKUeu34)
+
 Fake [server](https://github.com/Cholicer/server-for-test-task) for this app.
 
 Check out my other [project](https://github.com/Cholicer/new-example-project).
