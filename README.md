@@ -23,9 +23,7 @@ lib
 └───utils
 ```
 
-View [demo](https://streamable.com/ebhcvh).
-
-[![https://youtu.be/GIemSKUeu34](https://youtu.be/GIemSKUeu34)
+View [![demo](https://img.youtube.com/vi/GIemSKUeu34/0.jpg)](https://www.youtube.com/watch?v=GIemSKUeu34)
 
 Fake [server](https://github.com/Cholicer/server-for-test-task) for this app.
 
