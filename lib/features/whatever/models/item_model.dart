@@ -1,25 +1,51 @@
 class ItemModel {
-  final int id;
-  String title;
-  String body;
+  int id;
+  String date;
+  String description;
+  String category;
+  double amount;
 
-  ItemModel({required this.id, required this.title, required this.body});
+  ItemModel({
+    required this.id,
+    required this.date,
+    required this.description,
+    required this.category,
+    required this.amount,
+  });
 
-  // Convert from JSON map to Item object
   factory ItemModel.fromJson(Map<String, dynamic> json) {
     return ItemModel(
-      id: int.parse(json['id']),
-      title: json['title'] as String,
-      body: json['body'] as String,
+      id: json["id"],
+      date: json["date"],
+      description: json["description"],
+      category: json["category"],
+      amount: double.parse(json["amount"].toString()), // Преобразуем amount в double
     );
   }
 
-  // Convert from Item object to JSON map
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
-      'title': title,
-      'body': body,
+      "id": id,
+      "date": date,
+      "description": description,
+      "category": category,
+      "amount": amount,
     };
+  }
+
+  ItemModel copyWith({
+    int? id,
+    String? date,
+    String? description,
+    String? category,
+    double? amount,
+  }) {
+    return ItemModel(
+      id: id ?? this.id,
+      date: date ?? this.date,
+      description: description ?? this.description,
+      category: category ?? this.category,
+      amount: amount ?? this.amount,
+    );
   }
 }

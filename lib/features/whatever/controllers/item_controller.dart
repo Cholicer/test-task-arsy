@@ -18,22 +18,26 @@ class ItemController extends GetxController {
     try {
       items.value = await _apiService.getItems();
     } catch (e) {
-      Get.snackbar('Ошибка', 'Не удалось загрузить данные');
+      Get.snackbar('Ошибка', 'Не удалось загрузить данные: $e');
     } finally {
       isLoading.value = false;
     }
   }
 
-  Future<void> updateItem(ItemModel item) async {
+  Future<void> updateItem(int itemId, Map<String, String> newItem) async {
     try {
-      await _apiService.updateItem(item);
-      final index = items.indexWhere((element) => element.id == item.id);
+      await _apiService.updateItem(itemId, newItem);
+
+      final index = items.indexWhere((element) => element.id == itemId);
       if (index != -1) {
-        items[index] = item;
+        items[index] = items[index].copyWith(
+          description: newItem['description'],
+          category: newItem['category'],
+        );
       }
       Get.snackbar('Успех', 'Данные обновлены');
     } catch (e) {
-      Get.snackbar('Ошибка', 'Не удалось обновить данные');
+      Get.snackbar('Ошибка', 'Не удалось обновить данные: $e');
     }
   }
 }

@@ -29,13 +29,13 @@ class ItemListTile extends StatelessWidget {
           title: Padding(
             padding: const EdgeInsets.only(bottom: 8),
             child: Text(
-              item.title,
+              item.category,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ),
           subtitle: Text(
-            item.body,
+            item.description,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
           ),

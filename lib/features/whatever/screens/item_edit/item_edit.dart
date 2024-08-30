@@ -13,8 +13,8 @@ class ItemEditScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final ItemController _itemController = Get.find();
     final _formKey = GlobalKey<FormState>();
-    final _titleController = TextEditingController(text: item.title);
-    final _descriptionController = TextEditingController(text: item.body);
+    final _titleController = TextEditingController(text: item.category);
+    final _descriptionController = TextEditingController(text: item.description);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Редактировать элемент')),
@@ -44,11 +44,10 @@ class ItemEditScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    _itemController.updateItem(ItemModel(
-                      id: item.id,
-                      title: _titleController.text,
-                      body: _descriptionController.text,
-                    ));
+                    _itemController.updateItem(item.id, {
+                      'description': _descriptionController.text,
+                      'category': _titleController.text,
+                    });
                     Get.back();
                   }
                 },
